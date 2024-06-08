@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import TableView from "../../components/Table/TableView";
 import { BadgeCheck, BadgeX, Check, Pencil, Trash2, X } from "lucide-react";
+import SearchComponent from "../../components/SearchComponent/SearchComponent";
 
 const ViewMembers = () => {
   const [memberlist, setMemberList] = useState([]);
@@ -346,6 +347,7 @@ const ViewMembers = () => {
   ];
   return (
     <div className="m-0 p-0">
+          <SearchComponent/>
       <TableView
         memberlist={memberlist}
         tableHeadings={tableHeadings}
